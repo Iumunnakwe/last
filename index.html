@@ -4,26 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to Ihechineme Universe</title>
+    <link rel="stylesheet" type="text/css" href="style.css"> 
     <style>
         /* Your CSS styles here */
         body {
             font-family: "Arial", sans-serif;
             text-align: center;
             background: url('https://images.rawpixel.com/image_1300/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3B4MTM2NjcxMC1pbWFnZS1rd3Z4eGVxcC5qcGc.jpg');
-            /* Replace with your galaxy/universe background image */
             background-size: cover;
             color: white;
             margin: 0;
             padding: 0;
         }
+
         .logo {
             float: left; /* Float the logo to the left */
             margin-left: 10px; /* Add some margin on the left */
             margin-top: 15px; /* Adjust top margin */
             width: 70px;
         }
-        .open-tab{
-            display:none;
+
+        .open-tab {
+            display: none;
         }
 
         .nav {
@@ -40,35 +42,39 @@
             color: white;
             z-index: 700;
         }
-        
+
         .nav img {
             padding: 0 10px;
             cursor: pointer;
         }
-        
+
         .tabs {
             display: flex;
             list-style: none;
             margin: 0;
             padding: 0;
         }
-        
-        .tab, .tab-icon {
+
+        .tab,
+        .tab-icon {
             margin: 10px;
             cursor: pointer;
         }
-        
+
         .tab-icon img {
             width: 30px;
         }
-        
+        #container {
+            padding-top: 120px; /* Adjust this value if needed */
+        }
+
         /* Add your other CSS styles here */
     </style>
 </head>
 <body>
     <div class="nav">
         <img class="open-tab" onclick="openNav()" src="https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dW5pdmVyc2V8ZW58MHx8MHx8fDA=" alt="Menu">
-        <img id="logo" src="https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dW5pdmVyc2V8ZW58MHx8MHx8fDA%3D" style="width:70px" alt="Logo">
+        <img id="logo" src="https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dW5pdmVyc2V8ZW58MHx8MHx8fDA%3D" class="logo" alt="Logo">
         <p>Unveiling the Universe: A Tiny Peek into its Grandeur</p>
         <ul class="tabs">
             <li class="tab"><a class="link" href="">Home</a></li>
@@ -80,75 +86,125 @@
 
     <div id="container">
         <h1>Welcome to Ihechineme Universe</h1>
-        <p>What world would you like to travel to?</p>
-        <button id="sudoku-button">Play Sudoku</button>
-        <button id="math-game-button">Play Math Addition Game</button>
-        <button id="particle-button">Particle Animation</button>
-        <button id="music-button">Play Music</button>
 
-        <!-- Game Sections -->
-        <div id="sudoku-game" style="display: none">
-            <h1>Let's play Sudoku🧩</h1>
-            <!-- Sudoku content here -->
+        <!-- Content Sections -->
+        <div class="container">
+            <h2>Solar System; An Overview</h2>
+            <p>Our solar system has one star, eight planets, five officially recognized dwarf planets, at least 290 moons, more than 1.3 million asteroids, and about 3,900 comets. It is located in an outer spiral arm of the Milky Way galaxy called the Orion Arm, or Orion Spur. Our solar system orbits the center of the galaxy at about 515,000 mph (828,000 kph). It takes about 230 million years to complete one orbit around the galactic center. We call it the solar system because it is made up of our star, the Sun, and everything bound to it by gravity – the planets Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune; dwarf planets Pluto, Ceres, Makemake, Haumea, and Eris – along with hundreds of moons; and millions of asteroids, comets, and meteoroids. Our solar system is the only one we know of that has a planet that supports life. So far, we only know of life on Earth, but we’re looking for life on other worlds.</p>
         </div>
-        <div id="math-game" style="display: none">
-            <!-- Math Game content here -->
-        </div>
-        <div id="particle-animation" style="display: none">
-            <!-- Particle Animation content here -->
-        </div>
-        <div id="music-section" style="display: none">
-            <!-- Music content here -->
+
+        <div class="Stars">
+            <h2>Stars</h2>
+            <p>Stars, those twinkling wonders, come in diverse types. Some burn bright and hot, while others are cool and steady. Their life cycles are cosmic tales, from birth to dazzling finales. Protostars: These cosmic nurseries birth stars from dense clouds of gas and dust. Gravity pulls material together, and as the protostar forms, it heralds the beginning of a stellar journey. Main Sequence Stars: The phase where stars spend most of their lives, including our sun. Here, hydrogen fuses into helium, releasing energy in a delicate cosmic dance. Red Giants and Super Giants: Stars, like aging performers, swell in size as they deplete their nuclear fuel. The once-diminished star becomes a grand, glowing giant, illuminating the cosmos. Supernovae: The grand finale for massive stars. In a spectacular explosion, they release energy equivalent to the brightness of entire galaxies. Supernovae scatter heavy elements, enriching the cosmos. Neutron Stars and Black Holes: The remnants of stellar fireworks. Neutron stars pack the mass of the sun into a city-sized space, while black holes, with their gravitational might, defy comprehension.</p>
+</div>
+          <div class="Galaxy">
+        <h2>Galaxies</h2>
+        <p>Galaxies, the sprawling metropolises of the cosmos, showcase a mesmerizing diversity in shapes and sizes. Spiral Galaxies: Elegant spirals with majestic arms, like the Milky Way. Stars orbit a central hub, creating a cosmic dance that paints the galaxy with celestial grace. Elliptical Galaxies: Oval-shaped gatherings of stars, akin to cosmic footballs. These galaxies range from small, dense ellipses to giants hosting trillions of stars. Irregular Galaxies: Playful and asymmetric, defying the structured forms of their counterparts. Irregular galaxies embody the whimsical nature of the universe.</p>
+    </div>
+
+    <div class="section">
+        <h2>Black Holes</h2>
+        <img src="https://cdn.mos.cms.futurecdn.net/HsDtpFEHbDpae6wBuW5wQo.jpg" alt="Black hole" style="width:100%; max-width: 600px;">
+        <p>Don't let the name fool you: a black hole is anything but empty space. Rather, it is a great amount of matter packed into a very small area - think of a star ten times more massive than the Sun squeezed into a sphere approximately the diameter of New York City. The result is a gravitational field so strong that nothing, not even light, can escape. In recent years, NASA instruments have painted a new picture of these strange objects that are, to many, the most fascinating objects in space.</p>
+    </div>
+
+    <div class="section">
+        <h2>Other Anomalies in Space</h2>
+        <h3>Radio Signal Blaster</h3>
+        <img src="https://assets-prd.ignimgs.com/2022/08/18/radio-signal-blaster-1660816875139.jpeg?fit=bounds&width=1280&height=720&dpr=2" alt="Radio Signal Blaster" style="width:100%; max-width: 600px;">
+        <p>Scientists once discovered a mysterious celestial object that was pulsating in space, blasting out radio signals approximately 4000 light-years (almost 24 quadrillion miles) away from Earth. The object released giant bursts of energy, causing it to brighten for roughly 30 - 60 seconds once every 18 minutes, acting like a lighthouse in the vast ocean of the cosmos. Several people suggested that the object might be a neutron star or a white dwarf star with a very powerful magnetic field, but that is yet to be proven.</p>
+
+        <h3>Solar System Traveller</h3>
+        <img src="https://assets-prd.ignimgs.com/2022/08/18/solar-system-traveller-1660817377699.jpg?fit=bounds&width=1280&height=720&dpr=2" alt="Solar System Traveller" style="width:100%; max-width: 600px;">
+        <p>A massive cigar-shaped object known as Oumuamua made headlines in 2017 when it whipped past Earth at an unusually high speed (196,000 mph, or 87.3 kps). NASA claimed that it was the first-ever object in our solar system that was "known to have originated elsewhere," but they were less certain about which star system it may have travelled from.</p>
+    </div>
+
+    <div class="container">
+        <h2>Recent Space News</h2>
+        <p>NASA's Webb reveals new features in heart of Milky Way: The latest image from NASA's James Webb Space Telescope shows a portion of the dense center of our galaxy in unprecedented detail, including never-before-seen features astronomers have yet to explain. The star-forming region, named Sagittarius C (Sgr C), is about 300 light-years from the Milky Way's central supermassive black hole, Sagittarius A*.</p>
+        <p>Scientists find 14 new transient objects in space by peering through the 'Christmas Tree Galaxy Cluster': An international team of scientists, led by University of Missouri's Haojing Yan, used NASA's James Webb Space Telescope (JWST) to discover 14 new transient objects during their time-lapse study of galaxy cluster MACS0416 -- located about 4.3 billion light years from Earth -- which they've dubbed as the "Christmas Tree Galaxy Cluster." "Transients are objects in space, like individual stars, that appear to suddenly brighten by orders of magnitudes and then fade away," said Yan, an associate professor in the Department of Physics and Astronomy.</p>
+        <p>New findings support long-proposed process of planet formation: Scientists using NASA's James Webb Space Telescope just made a breakthrough discovery in revealing how planets are made. By observing water vapor in protoplanetary disks, Webb confirmed a physical process involving the drifting of ice-coated solids from the outer regions of the disk into the rocky-planet zone. Theories have long proposed that icy pebbles forming in the cold, outer regions of protoplanetary disks -- the same area where comets originate in our solar system -- should be the fundamental seeds of planet formation.</p>
+    </div>
+
+    <div class="section">
+        <h2>Random Space Videos</h2>
+        <button id="random-button">Get Random Video</button>
+        <div class="random-video">
+            <!-- Random video content here -->
         </div>
     </div>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            // Initialize buttons and sections
-            const sudokuButton = document.getElementById('sudoku-button');
-            const mathGameButton = document.getElementById('math-game-button');
-            const particleButton = document.getElementById('particle-button');
-            const musicButton = document.getElementById('music-button');
+    <div class="section">
+        <h2>Games and Animations</h2>
+        <button id="sudoku-button">Play Sudoku</button>
+        <button id="math-game-button">Play Math Addition Game</button>
+        <button id="particle-button">Particle Animation</button>
+        <button id="music-button" data-play="true">Play Music</button>
+    </div>
 
-            const sudokuGame = document.getElementById('sudoku-game');
-            const mathGame = document.getElementById('math-game');
-            const particleAnimation = document.getElementById('particle-animation');
-            const musicSection = document.getElementById('music-section');
+    <!-- Game Sections -->
+    <div id="sudoku-game" style="display: none">
+        <h3>Let's play Sudoku🧩</h3>
+        <!-- Sudoku content here -->
+    </div>
+    <div id="math-game" style="display: none">
+        <!-- Math Game content here -->
+    </div>
+    <div id="particle-animation" style="display: none">
+        <!-- Particle Animation content here -->
+    </div>
+    <div id="music-section" style="display: none">
+        <!-- Music content here -->
+    </div>
+</div>
 
-            sudokuButton.addEventListener('click', () => {
-                sudokuGame.style.display = 'block';
-                mathGame.style.display = 'none';
-                particleAnimation.style.display = 'none';
-                musicSection.style.display = 'none';
-            });
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // Initialize buttons and sections
+        const sudokuButton = document.getElementById('sudoku-button');
+        const mathGameButton = document.getElementById('math-game-button');
+        const particleButton = document.getElementById('particle-button');
+        const musicButton = document.getElementById('music-button');
 
-            mathGameButton.addEventListener('click', () => {
-                sudokuGame.style.display = 'none';
-                mathGame.style.display = 'block';
-                particleAnimation.style.display = 'none';
-                musicSection.style.display = 'none';
-            });
+        const sudokuGame = document.getElementById('sudoku-game');
+        const mathGame = document.getElementById('math-game');
+        const particleAnimation = document.getElementById('particle-animation');
+        const musicSection = document.getElementById('music-section');
 
-            particleButton.addEventListener('click', () => {
-                sudokuGame.style.display = 'none';
-                mathGame.style.display = 'none';
-                particleAnimation.style.display = 'block';
-                musicSection.style.display = 'none';
-            });
+        sudokuButton.addEventListener('click', () => {
+            sudokuGame.style.display = 'block';
+            mathGame.style.display = 'none';
+            particleAnimation.style.display = 'none';
+            musicSection.style.display = 'none';
+        });
 
-            musicButton.addEventListener('click', () => {
-                sudokuGame.style.display = 'none';
-                mathGame.style.display = 'none';
-                particleAnimation.style.display = 'none';
-                musicSection.style.display = 'block';
-            });
+        mathGameButton.addEventListener('click', () => {
+            sudokuGame.style.display = 'none';
+            mathGame.style.display = 'block';
+            particleAnimation.style.display = 'none';
+            musicSection.style.display = 'none';
+        });
 
-            const canvas = document.getElementById("canva");
-            const ctx = canvas.getContext('2d');
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
+        particleButton.addEventListener('click', () => {
+            sudokuGame.style.display = 'none';
+            mathGame.style.display = 'none';
+            particleAnimation.style.display = 'block';
+            musicSection.style.display = 'none';
+        });
 
-            let particleArray = [];
+        musicButton.addEventListener('click', () => {
+            sudokuGame.style.display = 'none';
+            mathGame.style.display = 'none';
+            particleAnimation.style.display = 'none';
+            musicSection.style.display = 'block';
+        });
+
+        const canvas = document.getElementById("canva");
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        let particleArray = [];
             let mouse = {
                 x: null,
                 y: null,
@@ -160,145 +216,96 @@
                 mouse.y = e.y;
             });
 
-            class Particle {
-                constructor(x, y, directionX, directionY, size, color) {
-                    this.x = x;
-                    this.y = y;
-                    this.directionX = directionX;
-                    this.directionY = directionY;
-                    this.size = size;
-                    this.color = color;
-                }
-
-                draw() {
-                    ctx.beginPath();
-                    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
-                    ctx.fillStyle = '#F64C72';
-                    ctx.fill();
-                }
-
-                update() {
-                    if (this.x > canvas.width || this.x < 0) {
-                        this.directionX = -this.directionX;
-                    }
-
-                    if (this.y > canvas.height || this.y < 0) {
-                        this.directionY = -this.directionY;
-                    }
-
-                    let dx = mouse.x - this.x;
-                    let dy = mouse.y - this.y;
-                    let distance = Math.sqrt(dx * dx + dy * dy);
-                    if (distance < mouse.radius + this.size) {
-                        if (mouse.x < this.x && this.x < canvas.width - this.size * 10) {
-                            this.x += 10;
-                        }
-                        if (mouse.x > this.x && this.x > this.size * 10) {
-                            this.x -= 10;
-                        }
-                        if (mouse.y < this.y && this.y < canvas.height - this.size * 10) {
-                            this.y += 10;
-                        }
-                        if (mouse.y > this.y && this.y > this.size * 10) {
-                            this.y -= 10;
-                        }
-                    }
-
-                    this.x += this.directionX;
-                    this.y += this.directionY;
-                    this.draw();
-                }
+        class Particle {
+            constructor(x, y, directionX, directionY, size, color) {
+                this.x = x;
+                this.y = y;
+                this.directionX = directionX;
+                this.directionY = directionY;
+                this.size = size;
+                this.color = color;
             }
 
-            function getParticles() {
-                particleArray = [];
-                let numParticles = (canvas.height * canvas.width) / 10000;
-                for (let i = 0; i < numParticles * 2; i++) {
-                    let size = 1;
-                    let x = (Math.random() * ((innerWidth - size * 2) - (size * 2)) + size * 2);
-                    let y = (Math.random() * ((innerHeight - size * 2) - (size * 2)) + size * 2);
-                    let directionX = (Math.random() * 5) - 2.5;
-                    let directionY = (Math.random() * 5) - 2.5;
-                    let color = '#99738E';
-
-                    particleArray.push(new Particle(x, y, directionX, directionY, size, color));
-                }
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
+                ctx.fillStyle = '#8C5523';
+                ctx.fill();
             }
 
-            function connectParticles() {
-                let opacityValue = 0.25;
-                for (let i = 0; i < particleArray.length; i++) {
-                    for (let j = i; j < particleArray.length; j) {
-                        let distance = ((particleArray[i].x - particleArray[j].x) * (particleArray[i].x - particleArray[j].x)) + ((particleArray[i].y - particleArray[j].y) * (particleArray[i].y - particleArray[j].y));
-                        if (distance < (canvas.width / 8) * (canvas.height / 8)) {
-                            ctx.strokeStyle = 'rgba(255,255,255,' + opacityValue + ')';
-                            ctx.lineWidth = 1;
-                            ctx.beginPath();
-                            ctx.moveTo(particleArray[i].x, particleArray[i].y);
-                            ctx.lineTo(particleArray[j].x, particleArray[j].y);
-                            ctx.stroke();
-                        }
+            update() {
+                if (this.x > canvas.width || this.x < 0) {
+                    this.directionX = -this.directionX;
+                }
+                if (this.y > canvas.height || this.y < 0) {
+                    this.directionY = -this.directionY;
+                }
+
+                let dx = mouse.x - this.x;
+                let dy = mouse.y - this.y;
+                let distance = Math.sqrt(dx * dx + dy * dy);
+
+                if (distance < mouse.radius + this.size) {
+                    if (mouse.x < this.x && this.x < canvas.width - this.size * 10) {
+                        this.x += 5;
+                    }
+                    if (mouse.x > this.x && this.x > this.size * 10) {
+                        this.x -= 5;
+                    }
+                    if (mouse.y < this.y && this.y < canvas.height - this.size * 10) {
+                        this.y += 5;
+                    }
+                    if (mouse.y > this.y && this.y > this.size * 10) {
+                        this.y -= 5;
                     }
                 }
+
+                this.x += this.directionX;
+                this.y += this.directionY;
+                this.draw();
             }
+        }
 
-            function sunray() {
-                let opacityValue = 1;
-                for (let i = 0; i < particleArray.length; i++) {
-                    let dx = mouse.x - particleArray[i].x;
-                    let dy = mouse.y - particleArray[i].y;
-                    let distance = Math.sqrt(dx * dx + dy * dy);
-                    if (distance < mouse.radius + particleArray[i].size) {
-                        let opacityValue = 1 - (distance / 20000);
-                        ctx.strokeStyle = 'rgba(0,0,0,' + opacityValue + ')';
-                        ctx.lineWidth = 1;
-                        ctx.beginPath();
-                        ctx.moveTo(particleArray[i].x, particleArray[i].y);
-                        ctx.lineTo(mouse.x, mouse.y);
-                        ctx.stroke();
-                    }
-                }
+        function init() {
+            particleArray = [];
+            for (let i = 0; i < 100; i++) {
+                let size = Math.random() * 5 + 1;
+                let x = Math.random() * (window.innerWidth - size * 2);
+                let y = Math.random() * (window.innerHeight - size * 2);
+                let directionX = (Math.random() * 5) - 2.5;
+                let directionY = (Math.random() * 5) - 2.5;
+                let color = '#8C5523';
+
+                particleArray.push(new Particle(x, y, directionX, directionY, size, color));
             }
+        }
 
-            window.addEventListener('resize', function () {
-                canvas.width = innerWidth;
-                canvas.height = innerHeight;
-                mouse.radius = (canvas.width / 80) * (canvas.height / 80);
-                getParticles();
-            });
+        function animate() {
+            requestAnimationFrame(animate);
+            ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
 
-            function animate() {
-                requestAnimationFrame(animate);
-                ctx.clearRect(0, 0, innerWidth, innerHeight);
-
-                for (let i = 0; i < particleArray.length; i++) {
-                    particleArray[i].update();
-                }
-                sunray();
-                connectParticles();
+            for (let i = 0; i < particleArray.length; i++) {
+                particleArray[i].update();
             }
+        }
 
-            window.addEventListener('mouseout', function () {
-                mouse.x = undefined;
-                mouse.y = undefined;
-            });
+        init();
+        animate();
+    });
+</script>
 
-            getParticles();
-            animate();
+<script>
+    function openNav() {
+        document.getElementById("mySidebar").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+        document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    }
 
-            function playMusic() {
-                const music = new Audio("https://s3-us-west-2.amazonaws.com/s.cdpn.io/161676/music.mp3");
-
-                music.addEventListener("canplay", () => {
-                    music.play();
-                });
-            }
-
-            const musicBtns = document.querySelectorAll("[data-play]");
-            musicBtns.forEach(btn => {
-                btn.addEventListener("click", playMusic);
-            });
-        });
-    </script>
+    function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("main").style.marginLeft= "0";
+        document.body.style.backgroundColor = "white";
+    }
+</script>
 </body>
 </html>
