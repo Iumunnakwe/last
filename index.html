@@ -255,23 +255,7 @@ Countless stories since have taken place on Mars or explored the possibilities o
                                         </div>
                               
                                   </div>
-
-
-
-
-
-
-
-
-
-    <div class="section">
-        <h2>Games and Animations</h2>
-        <button id="sudoku-button">Play Sudoku</button>
-        <button id="math-game-button">Play Math Addition Game</button>
-        <button id="particle-button">Particle Animation</button>
-        <button id="music-button" data-play="true">Play Music</button>
-    </div>
-
+   
     <!-- Game Sections -->
     <div id="sudoku-game" style="display: none">
         <h3>Let's play Sudoku🧩</h3>
@@ -301,33 +285,7 @@ Countless stories since have taken place on Mars or explored the possibilities o
         const particleAnimation = document.getElementById('particle-animation');
         const musicSection = document.getElementById('music-section');
 
-        sudokuButton.addEventListener('click', () => {
-            sudokuGame.style.display = 'block';
-            mathGame.style.display = 'none';
-            particleAnimation.style.display = 'none';
-            musicSection.style.display = 'none';
-        });
-
-        mathGameButton.addEventListener('click', () => {
-            sudokuGame.style.display = 'none';
-            mathGame.style.display = 'block';
-            particleAnimation.style.display = 'none';
-            musicSection.style.display = 'none';
-        });
-
-        particleButton.addEventListener('click', () => {
-            sudokuGame.style.display = 'none';
-            mathGame.style.display = 'none';
-            particleAnimation.style.display = 'block';
-            musicSection.style.display = 'none';
-        });
-
-        musicButton.addEventListener('click', () => {
-            sudokuGame.style.display = 'none';
-            mathGame.style.display = 'none';
-            particleAnimation.style.display = 'none';
-            musicSection.style.display = 'block';
-        });
+       
         document.getElementById('Youtube-button').addEventListener('click', function () {
                 document.getElementById('sudoku-game').style.display = 'none';
                 document.getElementById('math-game').style.display = 'none';
@@ -335,99 +293,36 @@ Countless stories since have taken place on Mars or explored the possibilities o
                 document.getElementById('music-section').style.display = 'none';
                 document.getElementById('Youtube-music').style.display = 'block';
                  });
+                 document.getElementById('music-button').addEventListener('click', function () {
+            document.getElementById('sudoku-game').style.display = 'none';
+            document.getElementById('math-game').style.display = 'none';
+            document.getElementById('particle-animation').style.display = 'none';
+          document.getElementById('Youtube-music').style.display = 'none'; 
+            document.getElementById('music-section').style.display = 'block';
+        });
+        document.getElementById('particle-button').addEventListener('click', function () {
+            document.getElementById('sudoku-game').style.display = 'none';
+            document.getElementById('math-game').style.display = 'none';
+           document.getElementById('Youtube-music').style.display = 'none'; document.getElementById('particle-animation').style.display = 'block';
+        });
+        document.getElementById('math-game-button').addEventListener('click', function () {
+            document.getElementById('sudoku-game').style.display = 'none';
+            document.getElementById('math-game').style.display = 'block';
+           document.getElementById('Youtube-music').style.display = 'none';  document.getElementById('particle-animation').style.display = 'none';
+        });
+        document.getElementById('sudoku-button').addEventListener('click', function () {
+            document.getElementById('sudoku-game').style.display = 'block';
+            document.getElementById('math-game').style.display = 'none';
+           document.getElementById('Youtube-music').style.display = 'none';  document.getElementById('particle-animation').style.display = 'none';
+        });
+    
 
         const canvas = document.getElementById("canva");
         const ctx = canvas.getContext('2d');
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
 
-        let particleArray = [];
-            let mouse = {
-                x: null,
-                y: null,
-                radius: (canvas.height / 80) * (canvas.width / 80)
-            };
-
-            window.addEventListener('mousemove', function (e) {
-                mouse.x = e.x;
-                mouse.y = e.y;
-            });
-
-        class Particle {
-            constructor(x, y, directionX, directionY, size, color) {
-                this.x = x;
-                this.y = y;
-                this.directionX = directionX;
-                this.directionY = directionY;
-                this.size = size;
-                this.color = color;
-            }
-
-            draw() {
-                ctx.beginPath();
-                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
-                ctx.fillStyle = '#8C5523';
-                ctx.fill();
-            }
-
-            update() {
-                if (this.x > canvas.width || this.x < 0) {
-                    this.directionX = -this.directionX;
-                }
-                if (this.y > canvas.height || this.y < 0) {
-                    this.directionY = -this.directionY;
-                }
-
-                let dx = mouse.x - this.x;
-                let dy = mouse.y - this.y;
-                let distance = Math.sqrt(dx * dx + dy * dy);
-
-                if (distance < mouse.radius + this.size) {
-                    if (mouse.x < this.x && this.x < canvas.width - this.size * 10) {
-                        this.x += 5;
-                    }
-                    if (mouse.x > this.x && this.x > this.size * 10) {
-                        this.x -= 5;
-                    }
-                    if (mouse.y < this.y && this.y < canvas.height - this.size * 10) {
-                        this.y += 5;
-                    }
-                    if (mouse.y > this.y && this.y > this.size * 10) {
-                        this.y -= 5;
-                    }
-                }
-
-                this.x += this.directionX;
-                this.y += this.directionY;
-                this.draw();
-            }
-        }
-
-        function init() {
-            particleArray = [];
-            for (let i = 0; i < 100; i++) {
-                let size = Math.random() * 5 + 1;
-                let x = Math.random() * (window.innerWidth - size * 2);
-                let y = Math.random() * (window.innerHeight - size * 2);
-                let directionX = (Math.random() * 5) - 2.5;
-                let directionY = (Math.random() * 5) - 2.5;
-                let color = '#8C5523';
-
-                particleArray.push(new Particle(x, y, directionX, directionY, size, color));
-            }
-        }
-
-        function animate() {
-            requestAnimationFrame(animate);
-            ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
-
-            for (let i = 0; i < particleArray.length; i++) {
-                particleArray[i].update();
-            }
-        }
-
-        init();
-        animate();
+      
     });
 </script>
 
