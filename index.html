@@ -245,7 +245,16 @@ Countless stories since have taken place on Mars or explored the possibilities o
                                     </div>
                           
                               </div>
-
+                              <div id="Youtube-music" style="display: none">
+                                <h1>My favourite videos</h1> 
+                                        <div class="videoWrapper">
+                                            <iframe width="560" height="315" src="https://www.youtube.com/embed/hTYxFangDHM?si=sMizdVHoxgu5iwXj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                          <iframe width="560" height="315" src="https://www.youtube.com/embed/34OJXQeIn64?si=9qfD5FnnDfL8HlCd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                          <iframe width="560" height="315" src="https://www.youtube.com/embed/AVoV0IDivAQ?si=E7GR3uH7QMjtGiy0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                         <iframe width="560" height="315" src="https://www.youtube.com/embed/qDhP6lUO_AY?si=o4BSVA1q28vNNnsN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                        </div>
+                              
+                                  </div>
 
 
 
@@ -319,6 +328,13 @@ Countless stories since have taken place on Mars or explored the possibilities o
             particleAnimation.style.display = 'none';
             musicSection.style.display = 'block';
         });
+        document.getElementById('Youtube-button').addEventListener('click', function () {
+                document.getElementById('sudoku-game').style.display = 'none';
+                document.getElementById('math-game').style.display = 'none';
+                document.getElementById('particle-animation').style.display = 'none';
+                document.getElementById('music-section').style.display = 'none';
+                document.getElementById('Youtube-music').style.display = 'block';
+                 });
 
         const canvas = document.getElementById("canva");
         const ctx = canvas.getContext('2d');
