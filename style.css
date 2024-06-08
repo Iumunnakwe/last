@@ -87,3 +87,42 @@ h3 {
 .vertical-line {
     border-right: 1px solid white;
 }
+
+.tabs {
+  display: flex;
+  list-style: none;
+  column-gap: 10px;
+  margin:0;
+}
+
+.tab, .dropbtn {
+  margin: 10px;
+  cursor: pointer;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+/* styles.css */
+
+
+
+.tab-icon {
+  margin: auto;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.nav {
+  font-size: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  width: 100%;
+  background-color: #113;
+  color: white;
+  z-index: 700;
+}
